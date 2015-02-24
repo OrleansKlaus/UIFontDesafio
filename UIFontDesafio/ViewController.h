@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *tfRecebeNome;
+- (IBAction)btAlterarNome:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UILabel *lbMostraNome;
+- (IBAction)btAlterarFonte:(UIButton *)sender;
 
 
 @end

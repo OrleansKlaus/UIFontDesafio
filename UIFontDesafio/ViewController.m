@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize lbMostraNome, tfRecebeNome;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,4 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btAlterarNome:(UIButton *)sender {
+    lbMostraNome.text = tfRecebeNome.text;
+    
+    [tfRecebeNome resignFirstResponder];
+}
+- (IBAction)btAlterarFonte:(UIButton *)sender {
+
+    lbMostraNome.font = [UIFont fontWithName:sender.titleLabel.text size:17];
+    
+    [tfRecebeNome resignFirstResponder];
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [tfRecebeNome resignFirstResponder];
+}
 @end
